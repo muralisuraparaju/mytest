@@ -37,5 +37,11 @@ outputport and inputport represents a connection to data. "type" in output or in
 Give python code to generate test data products in the financial services area - specifically, investment banking, wealth management and risk area. The number of data products should be configurable. Your task is to pick the relevant subject areas in these domains - not less than 100.
 
 =====================================
+Word cloud
+=====================================
+Based on the sample data, we need to create a word cloud from the data based on name, description of data products and data sets. Give python code to cluster the data and give the cluster info - theme of dataset, count of data sets, count of data products
 
 =====================================
+Embeddings based word cloud
+=====================================
+Based on sample data above,  give python code to create  embeddings of name, description of data products, datasets and physical schema.
