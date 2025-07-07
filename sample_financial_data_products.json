@@ -1,0 +1,2439 @@
+[
+  {
+    "info": {
+      "name": "wealth_management_structured_products_product",
+      "description": "Wealth management data product for structured products services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_structured_products_master_data",
+        "description": "Master data repository for structured_products",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "structured_products entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "structured_products amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "structured_products status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "structured_products category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_structured_products_performance_data",
+        "type": "Kafka",
+        "format": "delimited"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_structured_products_reference_feed",
+        "type": "RDBMS",
+        "format": "delimited"
+      },
+      {
+        "name": "wealth_management_structured_products_trade_data_feed",
+        "type": "RDBMS",
+        "format": "delta"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "risk_management_aml_monitoring_product",
+      "description": "Risk management data product for aml monitoring assessment, supporting enterprise risk monitoring and compliance"
+    },
+    "datasets": [
+      {
+        "name": "risk_management_aml_monitoring_aggregated_data",
+        "description": "Aggregated aml_monitoring metrics and summaries",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "aml_monitoring entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "aml_monitoring amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "aml_monitoring status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "aml_monitoring category"
+          },
+          {
+            "name": "aggregation_level",
+            "type": "string",
+            "description": "Aggregation level"
+          },
+          {
+            "name": "period_start",
+            "type": "date",
+            "description": "Aggregation period start"
+          },
+          {
+            "name": "period_end",
+            "type": "date",
+            "description": "Aggregation period end"
+          },
+          {
+            "name": "record_count",
+            "type": "integer",
+            "description": "Number of records aggregated"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "risk_management_aml_monitoring_performance_data",
+        "type": "Kafka",
+        "format": "parquet"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "risk_management_aml_monitoring_external_data",
+        "type": "ADLS",
+        "format": "csv"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_leveraged_buyouts_product",
+      "description": "Investment banking data product for leveraged buyouts operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_leveraged_buyouts_historical_data",
+        "description": "Historical time series data for leveraged_buyouts",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "leveraged_buyouts entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "leveraged_buyouts amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "leveraged_buyouts status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "leveraged_buyouts category"
+          },
+          {
+            "name": "version_number",
+            "type": "integer",
+            "description": "Data version number"
+          },
+          {
+            "name": "effective_date",
+            "type": "date",
+            "description": "Effective date"
+          },
+          {
+            "name": "expiry_date",
+            "type": "date",
+            "description": "Expiry date"
+          }
+        ]
+      },
+      {
+        "name": "investment_banking_leveraged_buyouts_validated_data",
+        "description": "Validated and quality-checked leveraged_buyouts data",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "leveraged_buyouts entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "leveraged_buyouts amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "leveraged_buyouts status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "leveraged_buyouts category"
+          }
+        ]
+      },
+      {
+        "name": "investment_banking_leveraged_buyouts_transactional_data",
+        "description": "Transactional records for leveraged_buyouts",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "leveraged_buyouts entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "leveraged_buyouts amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "leveraged_buyouts status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "leveraged_buyouts category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_leveraged_buyouts_compliance_report",
+        "type": "Kafka",
+        "format": "orc"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_leveraged_buyouts_raw_input",
+        "type": "RDBMS",
+        "format": "excel"
+      },
+      {
+        "name": "investment_banking_leveraged_buyouts_external_data",
+        "type": "RDBMS",
+        "format": "json"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_high_frequency_trading_product",
+      "description": "Investment banking data product for high frequency trading operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_high_frequency_trading_real_time_data",
+        "description": "Real-time streaming data for high_frequency_trading",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "high_frequency_trading entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "high_frequency_trading amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "high_frequency_trading status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "high_frequency_trading category"
+          },
+          {
+            "name": "sequence_number",
+            "type": "integer",
+            "description": "Message sequence number"
+          },
+          {
+            "name": "processing_timestamp",
+            "type": "timestamp",
+            "description": "Processing timestamp"
+          },
+          {
+            "name": "latency_ms",
+            "type": "integer",
+            "description": "Processing latency in milliseconds"
+          }
+        ]
+      },
+      {
+        "name": "investment_banking_high_frequency_trading_validated_data",
+        "description": "Validated and quality-checked high_frequency_trading data",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "high_frequency_trading entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "high_frequency_trading amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "high_frequency_trading status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "high_frequency_trading category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_high_frequency_trading_performance_data",
+        "type": "Kafka",
+        "format": "json"
+      },
+      {
+        "name": "investment_banking_high_frequency_trading_processed_output",
+        "type": "ADLS",
+        "format": "delimited"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_high_frequency_trading_reference_feed",
+        "type": "RDBMS",
+        "format": "json"
+      },
+      {
+        "name": "investment_banking_high_frequency_trading_upstream_system",
+        "type": "ADLS",
+        "format": "delimited"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "risk_management_disaster_recovery_product",
+      "description": "Risk management data product for disaster recovery assessment, supporting enterprise risk monitoring and compliance"
+    },
+    "datasets": [
+      {
+        "name": "risk_management_disaster_recovery_reference_data",
+        "description": "Reference data for disaster_recovery operations",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "disaster_recovery entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "disaster_recovery amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "disaster_recovery status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "disaster_recovery category"
+          },
+          {
+            "name": "reference_code",
+            "type": "string",
+            "description": "Reference code"
+          },
+          {
+            "name": "reference_value",
+            "type": "string",
+            "description": "Reference value"
+          },
+          {
+            "name": "is_active",
+            "type": "boolean",
+            "description": "Active indicator"
+          }
+        ]
+      },
+      {
+        "name": "risk_management_disaster_recovery_derived_data",
+        "description": "Derived analytics and calculations for disaster_recovery",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "disaster_recovery entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "disaster_recovery amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "disaster_recovery status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "disaster_recovery category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "risk_management_disaster_recovery_analytics_output",
+        "type": "RDBMS",
+        "format": "excel"
+      },
+      {
+        "name": "risk_management_disaster_recovery_performance_data",
+        "type": "RDBMS",
+        "format": "parquet"
+      },
+      {
+        "name": "risk_management_disaster_recovery_risk_metrics",
+        "type": "ADLS",
+        "format": "delimited"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "risk_management_disaster_recovery_source_feed",
+        "type": "Kafka",
+        "format": "parquet"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "risk_management_information_security_product",
+      "description": "Risk management data product for information security assessment, supporting enterprise risk monitoring and compliance"
+    },
+    "datasets": [
+      {
+        "name": "risk_management_information_security_aggregated_data",
+        "description": "Aggregated information_security metrics and summaries",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "information_security entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "information_security amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "information_security status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "information_security category"
+          },
+          {
+            "name": "aggregation_level",
+            "type": "string",
+            "description": "Aggregation level"
+          },
+          {
+            "name": "period_start",
+            "type": "date",
+            "description": "Aggregation period start"
+          },
+          {
+            "name": "period_end",
+            "type": "date",
+            "description": "Aggregation period end"
+          },
+          {
+            "name": "record_count",
+            "type": "integer",
+            "description": "Number of records aggregated"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "risk_management_information_security_risk_metrics",
+        "type": "Kafka",
+        "format": "excel"
+      },
+      {
+        "name": "risk_management_information_security_reporting_output",
+        "type": "ADLS",
+        "format": "delimited"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "risk_management_information_security_external_data",
+        "type": "RDBMS",
+        "format": "excel"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_ultra_high_net_worth_product",
+      "description": "Wealth management data product for ultra high net worth services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_ultra_high_net_worth_derived_data",
+        "description": "Derived analytics and calculations for ultra_high_net_worth",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "ultra_high_net_worth entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "ultra_high_net_worth amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "ultra_high_net_worth status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "ultra_high_net_worth category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_ultra_high_net_worth_risk_metrics",
+        "type": "ADLS",
+        "format": "fixed_width"
+      },
+      {
+        "name": "wealth_management_ultra_high_net_worth_performance_data",
+        "type": "Kafka",
+        "format": "orc"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_ultra_high_net_worth_trade_data_feed",
+        "type": "Kafka",
+        "format": "fixed_width"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_family_office_product",
+      "description": "Wealth management data product for family office services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_family_office_raw_data",
+        "description": "Raw family_office data collected from various sources",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "family_office entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "family_office amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "family_office status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "family_office category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_family_office_analytics_output",
+        "type": "ADLS",
+        "format": "excel"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_family_office_raw_input",
+        "type": "RDBMS",
+        "format": "avro"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_corporate_actions_product",
+      "description": "Investment banking data product for corporate actions operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_corporate_actions_master_data",
+        "description": "Master data repository for corporate_actions",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "corporate_actions entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "corporate_actions amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "corporate_actions status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "corporate_actions category"
+          }
+        ]
+      },
+      {
+        "name": "investment_banking_corporate_actions_aggregated_data",
+        "description": "Aggregated corporate_actions metrics and summaries",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "corporate_actions entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "corporate_actions amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "corporate_actions status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "corporate_actions category"
+          },
+          {
+            "name": "aggregation_level",
+            "type": "string",
+            "description": "Aggregation level"
+          },
+          {
+            "name": "period_start",
+            "type": "date",
+            "description": "Aggregation period start"
+          },
+          {
+            "name": "period_end",
+            "type": "date",
+            "description": "Aggregation period end"
+          },
+          {
+            "name": "record_count",
+            "type": "integer",
+            "description": "Number of records aggregated"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_corporate_actions_downstream_feed",
+        "type": "ADLS",
+        "format": "json"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_corporate_actions_external_data",
+        "type": "ADLS",
+        "format": "json"
+      },
+      {
+        "name": "investment_banking_corporate_actions_external_data",
+        "type": "RDBMS",
+        "format": "avro"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_settlement_processing_product",
+      "description": "Investment banking data product for settlement processing operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_settlement_processing_real_time_data",
+        "description": "Real-time streaming data for settlement_processing",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "settlement_processing entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "settlement_processing amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "settlement_processing status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "settlement_processing category"
+          },
+          {
+            "name": "sequence_number",
+            "type": "integer",
+            "description": "Message sequence number"
+          },
+          {
+            "name": "processing_timestamp",
+            "type": "timestamp",
+            "description": "Processing timestamp"
+          },
+          {
+            "name": "latency_ms",
+            "type": "integer",
+            "description": "Processing latency in milliseconds"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_settlement_processing_risk_metrics",
+        "type": "RDBMS",
+        "format": "orc"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_settlement_processing_upstream_system",
+        "type": "RDBMS",
+        "format": "parquet"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_risk_profiling_product",
+      "description": "Wealth management data product for risk profiling services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_risk_profiling_reference_data",
+        "description": "Reference data for risk_profiling operations",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "risk_profiling entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "risk_profiling amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "risk_profiling status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "risk_profiling category"
+          },
+          {
+            "name": "reference_code",
+            "type": "string",
+            "description": "Reference code"
+          },
+          {
+            "name": "reference_value",
+            "type": "string",
+            "description": "Reference value"
+          },
+          {
+            "name": "is_active",
+            "type": "boolean",
+            "description": "Active indicator"
+          }
+        ]
+      },
+      {
+        "name": "wealth_management_risk_profiling_reconciled_data",
+        "description": "Reconciled risk_profiling data across systems",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "risk_profiling entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "risk_profiling amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "risk_profiling status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "risk_profiling category"
+          }
+        ]
+      },
+      {
+        "name": "wealth_management_risk_profiling_master_data",
+        "description": "Master data repository for risk_profiling",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "risk_profiling entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "risk_profiling amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "risk_profiling status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "risk_profiling category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_risk_profiling_analytics_output",
+        "type": "ADLS",
+        "format": "xml"
+      },
+      {
+        "name": "wealth_management_risk_profiling_dashboard_data",
+        "type": "ADLS",
+        "format": "json"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_risk_profiling_upstream_system",
+        "type": "RDBMS",
+        "format": "parquet"
+      },
+      {
+        "name": "wealth_management_risk_profiling_trade_data_feed",
+        "type": "RDBMS",
+        "format": "csv"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_basel_reporting_product",
+      "description": "Investment banking data product for basel reporting operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_basel_reporting_validated_data",
+        "description": "Validated and quality-checked basel_reporting data",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "basel_reporting entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "basel_reporting amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "basel_reporting status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "basel_reporting category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_basel_reporting_processed_output",
+        "type": "Kafka",
+        "format": "delimited"
+      },
+      {
+        "name": "investment_banking_basel_reporting_processed_output",
+        "type": "Kafka",
+        "format": "json"
+      },
+      {
+        "name": "investment_banking_basel_reporting_risk_metrics",
+        "type": "RDBMS",
+        "format": "avro"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_basel_reporting_market_data_feed",
+        "type": "Kafka",
+        "format": "avro"
+      },
+      {
+        "name": "investment_banking_basel_reporting_market_data_feed",
+        "type": "ADLS",
+        "format": "csv"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_investment_proposals_product",
+      "description": "Wealth management data product for investment proposals services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_investment_proposals_raw_data",
+        "description": "Raw investment_proposals data collected from various sources",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "investment_proposals entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "investment_proposals amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "investment_proposals status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "investment_proposals category"
+          }
+        ]
+      },
+      {
+        "name": "wealth_management_investment_proposals_derived_data",
+        "description": "Derived analytics and calculations for investment_proposals",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "investment_proposals entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "investment_proposals amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "investment_proposals status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "investment_proposals category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_investment_proposals_performance_data",
+        "type": "ADLS",
+        "format": "fixed_width"
+      },
+      {
+        "name": "wealth_management_investment_proposals_dashboard_data",
+        "type": "ADLS",
+        "format": "avro"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_investment_proposals_reference_feed",
+        "type": "ADLS",
+        "format": "parquet"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_custody_reporting_product",
+      "description": "Wealth management data product for custody reporting services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_custody_reporting_cleansed_data",
+        "description": "Cleansed and validated custody_reporting data",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "custody_reporting entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "custody_reporting amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "custody_reporting status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "custody_reporting category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_custody_reporting_compliance_report",
+        "type": "ADLS",
+        "format": "delta"
+      },
+      {
+        "name": "wealth_management_custody_reporting_reporting_output",
+        "type": "Kafka",
+        "format": "orc"
+      },
+      {
+        "name": "wealth_management_custody_reporting_processed_output",
+        "type": "ADLS",
+        "format": "json"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_custody_reporting_market_data_feed",
+        "type": "RDBMS",
+        "format": "json"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "risk_management_margin_requirements_product",
+      "description": "Risk management data product for margin requirements assessment, supporting enterprise risk monitoring and compliance"
+    },
+    "datasets": [
+      {
+        "name": "risk_management_margin_requirements_reference_data",
+        "description": "Reference data for margin_requirements operations",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "margin_requirements entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "margin_requirements amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "margin_requirements status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "margin_requirements category"
+          },
+          {
+            "name": "reference_code",
+            "type": "string",
+            "description": "Reference code"
+          },
+          {
+            "name": "reference_value",
+            "type": "string",
+            "description": "Reference value"
+          },
+          {
+            "name": "is_active",
+            "type": "boolean",
+            "description": "Active indicator"
+          }
+        ]
+      },
+      {
+        "name": "risk_management_margin_requirements_master_data",
+        "description": "Master data repository for margin_requirements",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "margin_requirements entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "margin_requirements amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "margin_requirements status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "margin_requirements category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "risk_management_margin_requirements_risk_metrics",
+        "type": "ADLS",
+        "format": "delimited"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "risk_management_margin_requirements_source_feed",
+        "type": "ADLS",
+        "format": "json"
+      },
+      {
+        "name": "risk_management_margin_requirements_trade_data_feed",
+        "type": "ADLS",
+        "format": "orc"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_liquidity_ratios_product",
+      "description": "Investment banking data product for liquidity ratios operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_liquidity_ratios_enriched_data",
+        "description": "Enriched liquidity_ratios data with additional context",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "liquidity_ratios entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "liquidity_ratios amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "liquidity_ratios status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "liquidity_ratios category"
+          }
+        ]
+      },
+      {
+        "name": "investment_banking_liquidity_ratios_validated_data",
+        "description": "Validated and quality-checked liquidity_ratios data",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "liquidity_ratios entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "liquidity_ratios amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "liquidity_ratios status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "liquidity_ratios category"
+          }
+        ]
+      },
+      {
+        "name": "investment_banking_liquidity_ratios_enriched_data",
+        "description": "Enriched liquidity_ratios data with additional context",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "liquidity_ratios entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "liquidity_ratios amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "liquidity_ratios status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "liquidity_ratios category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_liquidity_ratios_processed_output",
+        "type": "RDBMS",
+        "format": "parquet"
+      },
+      {
+        "name": "investment_banking_liquidity_ratios_reporting_output",
+        "type": "ADLS",
+        "format": "delta"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_liquidity_ratios_pricing_feed",
+        "type": "ADLS",
+        "format": "json"
+      },
+      {
+        "name": "investment_banking_liquidity_ratios_reference_feed",
+        "type": "Kafka",
+        "format": "csv"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_portfolio_management_product",
+      "description": "Wealth management data product for portfolio management services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_portfolio_management_raw_data",
+        "description": "Raw portfolio_management data collected from various sources",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "portfolio_id",
+            "type": "string",
+            "description": "Portfolio identifier"
+          },
+          {
+            "name": "client_id",
+            "type": "string",
+            "description": "Client identifier"
+          },
+          {
+            "name": "asset_class",
+            "type": "string",
+            "description": "Asset class"
+          },
+          {
+            "name": "security_id",
+            "type": "string",
+            "description": "Security identifier"
+          },
+          {
+            "name": "position_value",
+            "type": "decimal",
+            "description": "Position market value"
+          },
+          {
+            "name": "quantity",
+            "type": "decimal",
+            "description": "Position quantity"
+          },
+          {
+            "name": "weight",
+            "type": "decimal",
+            "description": "Portfolio weight percentage"
+          },
+          {
+            "name": "cost_basis",
+            "type": "decimal",
+            "description": "Cost basis"
+          },
+          {
+            "name": "unrealized_pnl",
+            "type": "decimal",
+            "description": "Unrealized P&L"
+          },
+          {
+            "name": "advisor_id",
+            "type": "string",
+            "description": "Investment advisor ID"
+          }
+        ]
+      },
+      {
+        "name": "wealth_management_portfolio_management_reference_data",
+        "description": "Reference data for portfolio_management operations",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "portfolio_id",
+            "type": "string",
+            "description": "Portfolio identifier"
+          },
+          {
+            "name": "client_id",
+            "type": "string",
+            "description": "Client identifier"
+          },
+          {
+            "name": "asset_class",
+            "type": "string",
+            "description": "Asset class"
+          },
+          {
+            "name": "security_id",
+            "type": "string",
+            "description": "Security identifier"
+          },
+          {
+            "name": "position_value",
+            "type": "decimal",
+            "description": "Position market value"
+          },
+          {
+            "name": "quantity",
+            "type": "decimal",
+            "description": "Position quantity"
+          },
+          {
+            "name": "weight",
+            "type": "decimal",
+            "description": "Portfolio weight percentage"
+          },
+          {
+            "name": "cost_basis",
+            "type": "decimal",
+            "description": "Cost basis"
+          },
+          {
+            "name": "unrealized_pnl",
+            "type": "decimal",
+            "description": "Unrealized P&L"
+          },
+          {
+            "name": "advisor_id",
+            "type": "string",
+            "description": "Investment advisor ID"
+          },
+          {
+            "name": "reference_code",
+            "type": "string",
+            "description": "Reference code"
+          },
+          {
+            "name": "reference_value",
+            "type": "string",
+            "description": "Reference value"
+          },
+          {
+            "name": "is_active",
+            "type": "boolean",
+            "description": "Active indicator"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_portfolio_management_performance_data",
+        "type": "ADLS",
+        "format": "delta"
+      },
+      {
+        "name": "wealth_management_portfolio_management_processed_output",
+        "type": "RDBMS",
+        "format": "avro"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_portfolio_management_external_data",
+        "type": "RDBMS",
+        "format": "parquet"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "investment_banking_credit_research_product",
+      "description": "Investment banking data product for credit research operations, providing comprehensive data management and analytics capabilities"
+    },
+    "datasets": [
+      {
+        "name": "investment_banking_credit_research_master_data",
+        "description": "Master data repository for credit_research",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "credit_research entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "credit_research amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "credit_research status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "credit_research category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "investment_banking_credit_research_compliance_report",
+        "type": "ADLS",
+        "format": "excel"
+      },
+      {
+        "name": "investment_banking_credit_research_analytics_output",
+        "type": "ADLS",
+        "format": "excel"
+      },
+      {
+        "name": "investment_banking_credit_research_performance_data",
+        "type": "Kafka",
+        "format": "delimited"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "investment_banking_credit_research_pricing_feed",
+        "type": "RDBMS",
+        "format": "excel"
+      },
+      {
+        "name": "investment_banking_credit_research_external_data",
+        "type": "ADLS",
+        "format": "json"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "wealth_management_kyc_processes_product",
+      "description": "Wealth management data product for kyc processes services, enabling client portfolio management and advisory functions"
+    },
+    "datasets": [
+      {
+        "name": "wealth_management_kyc_processes_cleansed_data",
+        "description": "Cleansed and validated kyc_processes data",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "kyc_processes entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "kyc_processes amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "kyc_processes status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "kyc_processes category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "wealth_management_kyc_processes_dashboard_data",
+        "type": "Kafka",
+        "format": "avro"
+      },
+      {
+        "name": "wealth_management_kyc_processes_dashboard_data",
+        "type": "ADLS",
+        "format": "json"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "wealth_management_kyc_processes_upstream_system",
+        "type": "RDBMS",
+        "format": "csv"
+      }
+    ]
+  },
+  {
+    "info": {
+      "name": "risk_management_risk_limits_product",
+      "description": "Risk management data product for risk limits assessment, supporting enterprise risk monitoring and compliance"
+    },
+    "datasets": [
+      {
+        "name": "risk_management_risk_limits_master_data",
+        "description": "Master data repository for risk_limits",
+        "physicalSchema": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Unique record identifier"
+          },
+          {
+            "name": "source_system",
+            "type": "string",
+            "description": "Source system name"
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "Record creation timestamp"
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "Record last update timestamp"
+          },
+          {
+            "name": "business_date",
+            "type": "date",
+            "description": "Business date for the record"
+          },
+          {
+            "name": "entity_id",
+            "type": "string",
+            "description": "risk_limits entity identifier"
+          },
+          {
+            "name": "amount",
+            "type": "decimal",
+            "description": "risk_limits amount"
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "risk_limits status"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "risk_limits category"
+          }
+        ]
+      }
+    ],
+    "outputports": [
+      {
+        "name": "risk_management_risk_limits_downstream_feed",
+        "type": "ADLS",
+        "format": "delimited"
+      },
+      {
+        "name": "risk_management_risk_limits_dashboard_data",
+        "type": "RDBMS",
+        "format": "fixed_width"
+      },
+      {
+        "name": "risk_management_risk_limits_performance_data",
+        "type": "Kafka",
+        "format": "parquet"
+      }
+    ],
+    "inputports": [
+      {
+        "name": "risk_management_risk_limits_reference_feed",
+        "type": "Kafka",
+        "format": "delimited"
+      },
+      {
+        "name": "risk_management_risk_limits_reference_feed",
+        "type": "Kafka",
+        "format": "orc"
+      }
+    ]
+  }
+]
