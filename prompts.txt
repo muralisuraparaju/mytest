@@ -1,0 +1,41 @@
+==================================
+Test data generation prompt
+==================================
+
+Given a contract for a data product as:
+
+{
+  "info": {
+    "name": "product name",
+    "description": "description"
+  },
+  "datasets": [
+    {
+      "name": "ds name",
+      "description": "ds-description"
+    }
+  ],
+  "outputports": [
+    {
+      "name": "op-name",
+      "type": "op-type",
+      "format": "my format"
+    }
+  ],
+  "inputports": [
+    {
+      "name": "ip-name",
+      "type": "ip-type",
+      "format": "my format"
+    }
+  ]
+}
+
+dataset represents the underlying dataset of a data product.
+outputport and inputport represents a connection to data. "type" in output or input port are of types - "ADLS", "RDBMS", "Kafka".
+
+Give python code to generate test data products in the financial services area - specifically, investment banking, wealth management and risk area. The number of data products should be configurable. Your task is to pick the relevant subject areas in these domains - not less than 100.
+
+=====================================
+
+=====================================
